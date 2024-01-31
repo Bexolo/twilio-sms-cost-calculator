@@ -9,6 +9,7 @@ A very simple tool to calculate costs for inbound/outbound SMS and line rental o
 
 ## To Do
 - Make it work with multiple line rentals
+- Dyanmically fetch Twilio pricing data
 
 ## Screenshot
 
