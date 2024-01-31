@@ -32,7 +32,7 @@
             }
 
             input[type="number"] {
-                width: 100%;
+                width: 80%;
                 padding: 10px;
                 margin-bottom: 10px;
                 border: 1px solid #ccc;
@@ -85,10 +85,19 @@
             .disabled-row {
                 background-color: #e3e3e3;
             }
+            
+            .hidden-input {
+                display: none;
+        }
         </style>
     </head>
     <body>
-        <h1>Text Messaging Cost Calculator</h1>
+        <h1>SMS Costs by Space</h1>
+         <div class="container">
+            <center><div class="total-cost"> Total running cost: $<span id="grandTotal">0.0000</span>/month
+            </div></center>
+        </div>
+        <br>
         <div class="container">
             <table>
                 <thead>
@@ -97,14 +106,14 @@
                         <th>Country</th>
                         <th>Outbound Texts</th>
                         <th>Inbound Texts</th>
-                        <th>Total Cost</th>
+                        <th>Total Cost (inc. line rental)</th>
                     </tr>
                 </thead>
                 <tbody>
                     <!-- Add rows for each country here -->
                     <tr>
                         <td class="on-off">
-                            <input type="checkbox" class="country-checkbox" checked>
+                            <input type="checkbox" class="country-checkbox">
                         </td>
                         <td>US</td>
                         <td>
@@ -117,46 +126,7 @@
                     </tr>
                     <tr>
                         <td class="on-off">
-                            <input type="checkbox" class="country-checkbox" checked>
-                        </td>
-                        <td>South Africa</td>
-                        <td>
-                            <input type="number" class="outbound" value="0">
-                        </td>
-                        <td>
-                            <input type="number" class="inbound" value="0">
-                        </td>
-                        <td class="total">0.0000</td>
-                    </tr>
-                    <tr>
-                        <td class="on-off">
-                            <input type="checkbox" class="country-checkbox" checked>
-                        </td>
-                        <td>Hungary</td>
-                        <td>
-                            <input type="number" class="outbound" value="0">
-                        </td>
-                        <td>
-                            <input type="number" class="inbound" value="0">
-                        </td>
-                        <td class="total">0.0000</td>
-                    </tr>
-                    <tr>
-                        <td class="on-off">
-                            <input type="checkbox" class="country-checkbox" checked>
-                        </td>
-                        <td>Romania</td>
-                        <td>
-                            <input type="number" class="outbound" value="0">
-                        </td>
-                        <td>
-                            <input type="number" class="inbound" value="0">
-                        </td>
-                        <td class="total">0.0000</td>
-                    </tr>
-                    <tr>
-                        <td class="on-off">
-                            <input type="checkbox" class="country-checkbox" checked>
+                            <input type="checkbox" class="country-checkbox">
                         </td>
                         <td>UK</td>
                         <td>
@@ -169,7 +139,46 @@
                     </tr>
                     <tr>
                         <td class="on-off">
-                            <input type="checkbox" class="country-checkbox" checked>
+                            <input type="checkbox" class="country-checkbox" >
+                        </td>
+                        <td>South Africa</td>
+                        <td>
+                            <input type="number" class="outbound" value="0">
+                        </td>
+                        <td>
+                            <input type="number" class="inbound" value="0">
+                        </td>
+                        <td class="total">0.0000</td>
+                    </tr>
+                    <tr>
+                        <td class="on-off">
+                            <input type="checkbox" class="country-checkbox" >
+                        </td>
+                        <td>Hungary</td>
+                        <td>
+                            <input type="number" class="outbound" value="0">
+                        </td>
+                        <td>
+                            <input type="number" class="inbound" value="0">
+                        </td>
+                        <td class="total">0.0000</td>
+                    </tr>
+                    <tr>
+                        <td class="on-off">
+                            <input type="checkbox" class="country-checkbox" >
+                        </td>
+                        <td>Romania</td>
+                        <td>
+                            <input type="number" class="outbound" value="0">
+                        </td>
+                        <td>
+                            <input type="number" class="inbound" value="0">
+                        </td>
+                        <td class="total">0.0000</td>
+                    </tr>
+                    <tr>
+                        <td class="on-off">
+                            <input type="checkbox" class="country-checkbox" >
                         </td>
                         <td>Norway</td>
                         <td>
@@ -182,7 +191,7 @@
                     </tr>
                     <tr>
                         <td class="on-off">
-                            <input type="checkbox" class="country-checkbox" checked>
+                            <input type="checkbox" class="country-checkbox" >
                         </td>
                         <td>Poland</td>
                         <td>
@@ -195,7 +204,7 @@
                     </tr>
                     <tr>
                         <td class="on-off">
-                            <input type="checkbox" class="country-checkbox" checked>
+                            <input type="checkbox" class="country-checkbox" >
                         </td>
                         <td>Germany</td>
                         <td>
@@ -208,7 +217,7 @@
                     </tr>
                     <tr>
                         <td class="on-off">
-                            <input type="checkbox" class="country-checkbox" checked>
+                            <input type="checkbox" class="country-checkbox" >
                         </td>
                         <td>Peru</td>
                         <td>
@@ -221,7 +230,7 @@
                     </tr>
                     <tr>
                         <td class="on-off">
-                            <input type="checkbox" class="country-checkbox" checked>
+                            <input type="checkbox" class="country-checkbox" >
                         </td>
                         <td>Mexico</td>
                         <td>
@@ -234,7 +243,7 @@
                     </tr>
                     <tr>
                         <td class="on-off">
-                            <input type="checkbox" class="country-checkbox" checked>
+                            <input type="checkbox" class="country-checkbox" >
                         </td>
                         <td>Child</td>
                         <td>
@@ -247,7 +256,7 @@
                     </tr>
                     <tr>
                         <td class="on-off">
-                            <input type="checkbox" class="country-checkbox" checked>
+                            <input type="checkbox" class="country-checkbox" >
                         </td>
                         <td>Philippines</td>
                         <td>
@@ -260,7 +269,7 @@
                     </tr>
                     <tr>
                         <td class="on-off">
-                            <input type="checkbox" class="country-checkbox" checked>
+                            <input type="checkbox" class="country-checkbox" >
                         </td>
                         <td>Portugal</td>
                         <td>
@@ -273,7 +282,7 @@
                     </tr>
                     <tr>
                         <td class="on-off">
-                            <input type="checkbox" class="country-checkbox" checked>
+                            <input type="checkbox" class="country-checkbox" >
                         </td>
                         <td>Czech Republic</td>
                         <td>
@@ -286,7 +295,7 @@
                     </tr>
                     <tr>
                         <td class="on-off">
-                            <input type="checkbox" class="country-checkbox" checked>
+                            <input type="checkbox" class="country-checkbox" >
                         </td>
                         <td>El Salvador</td>
                         <td>
@@ -299,7 +308,7 @@
                     </tr>
                     <tr>
                         <td class="on-off">
-                            <input type="checkbox" class="country-checkbox" checked>
+                            <input type="checkbox" class="country-checkbox" >
                         </td>
                         <td>Honduras</td>
                         <td>
@@ -312,7 +321,7 @@
                     </tr>
                     <tr>
                         <td class="on-off">
-                            <input type="checkbox" class="country-checkbox" checked>
+                            <input type="checkbox" class="country-checkbox" >
                         </td>
                         <td>Ecuador</td>
                         <td>
@@ -328,10 +337,7 @@
             <button type="button" id="calculateButton">Calculate Cost</button>
         </div>
         <br>
-        <div class="container">
-            <div class="total-cost"> Grand Total Cost: <span id="grandTotal">0.0000</span>
-            </div>
-        </div>
+
         <script>
             // JavaScript code for calculating and displaying the cost per country
             function calculateCost() {
@@ -393,7 +399,7 @@
                             countryInfo = ["Mexico", 6.25, 0.1079, 0.0200];
                             break;
                         case "Child":
-                            countryInfo = ["Child", 10.00, 0.0651, 0.0075];
+                            countryInfo = ["Chili", 10.00, 0.0651, 0.0075];
                             break;
                         case "Philippines":
                             countryInfo = ["Philippines", 120.00, 0.1699, 0.0240];
@@ -419,14 +425,14 @@
                     }
                     // Check for null values and disable input if detected
                     if (countryInfo[2] === null) {
-                        outboundInput.disabled = true;
+                        inboundInput.classList.add("hidden-input");                    
                     }
                     if (countryInfo[3] === null) {
-                        inboundInput.disabled = true;
+                        inboundInput.classList.add("hidden-input");
                     }
                     // Calculate the total cost for the country
                     const [countryName, monthlyCost, outboundCost, inboundCost] = countryInfo;
-                    const monthlyCostApplied = (outboundTexts !== 0 || inboundTexts !== 0) && rowEnabled;
+                    const monthlyCostApplied = rowEnabled;
                     const totalCost = (monthlyCostApplied ? monthlyCost : 0) + (outboundCost * outboundTexts) + (inboundCost * inboundTexts);
                     totalCell.textContent = totalCost.toFixed(4);
                     grandTotal += totalCost;
@@ -451,6 +457,7 @@
             countryCheckboxes.forEach(checkbox => {
                 checkbox.addEventListener("change", calculateCost);
             });
+            
             // Run calculateCost function on page load with default values
             calculateCost();
         </script>
