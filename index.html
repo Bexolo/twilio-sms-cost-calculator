@@ -141,6 +141,40 @@
                         <td class="on-off">
                             <input type="checkbox" class="country-checkbox">
                         </td>
+                        <td>Ireland</td>
+                        <td>
+                            <input type="number" class="rentals-required" value="1" min="1">
+                            <!-- New Input -->
+                        </td>
+                        <td>
+                            <input type="number" class="outbound" value="0" step="100">
+                        </td>
+                        <td>
+                            <input type="number" class="inbound" value="0" step="100">
+                        </td>
+                        <td class="total">0.0000</td>
+                    </tr>
+                    <tr>
+                        <td class="on-off">
+                            <input type="checkbox" class="country-checkbox">
+                        </td>
+                        <td>Australia</td>
+                        <td>
+                            <input type="number" class="rentals-required" value="1" min="1">
+                            <!-- New Input -->
+                        </td>
+                        <td>
+                            <input type="number" class="outbound" value="0" step="100">
+                        </td>
+                        <td>
+                            <input type="number" class="inbound" value="0" step="100">
+                        </td>
+                        <td class="total">0.0000</td>
+                    </tr>
+                    <tr>
+                        <td class="on-off">
+                            <input type="checkbox" class="country-checkbox">
+                        </td>
                         <td>South Africa</td>
                         <td>
                             <input type="number" class="rentals-required" value="1" min="1">
@@ -256,6 +290,23 @@
                         </td>
                         <td class="total">0.0000</td>
                     </tr>
+                      <tr>
+                        <td class="on-off">
+                            <input type="checkbox" class="country-checkbox">
+                        </td>
+                        <td>Italy</td>
+                        <td>
+                            <input type="number" class="rentals-required" value="1" min="1">
+                            <!-- New Input -->
+                        </td>
+                        <td>
+                            <input type="number" class="outbound" value="0" step="100">
+                        </td>
+                        <td>
+                            <input type="number" class="inbound" value="0" step="100">
+                        </td>
+                        <td class="total">0.0000</td>
+                      </tr>  
                     <tr>
                         <td class="on-off">
                             <input type="checkbox" class="country-checkbox">
@@ -392,6 +443,23 @@
                         </td>
                         <td class="total">0.0000</td>
                     </tr>
+                    <tr>
+                        <td class="on-off">
+                            <input type="checkbox" class="country-checkbox">
+                        </td>
+                        <td>India</td>
+                        <td>
+                            <input type="number" class="rentals-required" value="1" min="1">
+                            <!-- New Input -->
+                        </td>
+                        <td>
+                            <input type="number" class="outbound" value="0" step="100">
+                        </td>
+                        <td>
+                            <input type="number" class="inbound" value="0" step="100">
+                        </td>
+                        <td class="total">0.0000</td>
+                    </tr>
                 </tbody>
             </table>
         </div>
@@ -482,6 +550,18 @@
                             break;
                         case "Ecuador":
                             countryInfo = ["Ecuador", 1.00, 0.1810, null];
+                            break;
+                        case "India":
+                            countryInfo = ["India", 1.00, 0.0682, null];
+                            break;
+                        case "Australia":
+                            countryInfo = ["Australia", 1.00, 0.05152, 0.0075];
+                            break;
+                        case "Ireland":
+                            countryInfo = ["Ireland", 6.50, 0.07352, 0.0075];
+                            break;
+                         case "Italy":
+                            countryInfo = ["Italy", 30, 0.0927, 0.0200];
                             break;
                             // Add more cases for other countries here
                         default:
